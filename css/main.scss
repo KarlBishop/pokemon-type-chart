@@ -3,51 +3,206 @@
 ---
 @charset "utf-8";
 
+// VARIABLES
+$text-shadow-color: #807870;
+$text-shadow-depth: .125em;
+$box-shadow-color-highlight: rgba(255, 255, 255, 0.25);
+$box-shadow-color: rgba(0, 0, 0, 0.25);
+$box-shadow-depth: .125em;
 
+$background-color-good-damage: #00d000;
+$background-color-super-good-damage: #166616;
+$background-color-bad-damage: #ff4c4c;
+$background-color-super-bad-damage: #b02323;
+$text-shadow-color-good-damage: #0a0;
+$text-shadow-color-super-good-damage: #040;
+$text-shadow-color-bad-damage: #d44;
+$text-shadow-color-super-bad-damage: #800;
+$arrow-color: #666;
 
-// Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+// TOP LEVEL
 
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+html {
+  font-size: 56.25%;
 }
 
+body {
+  font-family: pixelmix;
+  font-size: 1em;
+}
 
+//POKETYPES
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+.poketype {
+  background-color: #888;
+  border-radius: .5em;
+  box-shadow: inset 0 $box-shadow-depth $box-shadow-color-highlight, inset 0 (-$box-shadow-depth) $box-shadow-color;
+  color: #fff;
+  display: inline-block;
+  min-width: 6em;
+  padding: .6em 0;
+  text-align: center;
+  text-shadow: $text-shadow-depth 0 $text-shadow-color, 0 $text-shadow-depth $text-shadow-color, $text-shadow-depth $text-shadow-depth $text-shadow-color;
+  text-transform: uppercase;
+}
+.thin .poketype {
+  min-width: 0;
+  max-width: 3.6666666em;
+  overflow: hidden;
+  padding: .6em .4em;
+  text-overflow: clip;
+}
+
+// COLOURS
+
+.bug      { background-color: #A8B820; }
+.dark     { background-color: #705848; }
+.dragon   { background-color: #7038F8; }
+.elec     { background-color: #F8D030; }
+.fairy    { background-color: #DEA5DE; }
+.fight    { background-color: #C03028; }
+.fire     { background-color: #F08030; }
+.flying   { background-color: #A890F0; }
+.ghost    { background-color: #705898; }
+.grass    { background-color: #78C850; }
+.ground   { background-color: #E0C068; }
+.ice      { background-color: #98D8D8; }
+.normal   { background-color: #A8A878; }
+.poison   { background-color: #A040A0; }
+.psychic  { background-color: #F85888; }
+.rock     { background-color: #B8A038; }
+.steel    { background-color: #B8B8D0; }
+.water    { background-color: #6890F0; }
+
+// LAYOUT
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 700px;
+  margin: 0 auto;
+  width: calc(2 * 944px);
+}
+
+article {
+  display: flex;
+  //flex-basis: 50%;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+// POKETYPES IN DIFFERENT PLACES
+
+.action > div {
+  display: flex;
+}
+
+.attacked-by > div {
+  justify-content: flex-end;
+}
+.attacking > div {
+  justify-content: flex-start;
+}
+
+.subject .poketype {
+  font-size: 2em;
+  padding: 1.3333333em 0;
+}
+
+.subject {
+  width: 108px;
+  margin: 0 40px;
+}
+
+.action {
+  width: 378px;
+  & > div {
+    position: relative;
+    &::after {
+      border-radius: 50%;
+      box-shadow: inset 0 $box-shadow-depth ($box-shadow-depth * 4) $box-shadow-color-highlight, inset 0 (-$box-shadow-depth) ($box-shadow-depth * 4) $box-shadow-color;
+      color: white;
+      display: block;
+      height: 2.25rem;
+      line-height: 2.25rem;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      width: 2.25rem;
+    }
+    &::before {
+      background-image: linear-gradient(to right, transparent 36px, white 36px),
+        linear-gradient(to bottom, transparent, transparent 3px, $arrow-color 3px, $arrow-color 4px, transparent 4px);
+      content: "\25BA";
+      color: $arrow-color;
+      display: block;
+      font-family: Arial;
+      font-size: 7px;
+      height: 6px;
+      line-height: 1;
+      position: absolute;
+      text-align: right;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+    }
+    &:empty::after, &:empty::before { display: none; }
+  }
+  .double-damage::after {
+    content: "2x";
+  }
+  .half-damage::after {
+    content: "\00bd";
+    font-family: Arial;
+    font-size: 1.3333em;
+  }
+  .no-damage::after {
+    //background-color: #888;
+    content: "O";
+    //text-shadow: .125em 0 #333, 0 .125em #333, .125em .125em #333;
+  }
+}
+
+.attacked-by {
+  & > div::before {
+    right: -40px;
+  }
+  & > div::after {
+    right: -38px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.attacking {
+  & > div::before {
+    left: -40px;
+  }
+  & > div::after {
+    left: -42px;
+    transform: translate(50%, -50%);
+  }
+}
+
+.attacked-by .double-damage::after,
+.attacking .half-damage::after {
+  background-color: $background-color-good-damage;
+  text-shadow: $text-shadow-depth 0 $text-shadow-color-good-damage, 0 $text-shadow-depth $text-shadow-color-good-damage, $text-shadow-depth $text-shadow-depth $text-shadow-color-good-damage;
+}
+.attacking .no-damage::after {
+  background-color: $background-color-super-good-damage;
+  text-shadow: $text-shadow-depth 0 $text-shadow-color-super-good-damage, 0 $text-shadow-depth $text-shadow-color-super-good-damage, $text-shadow-depth $text-shadow-depth $text-shadow-color-super-good-damage;
+}
+
+.attacked-by .half-damage::after,
+.attacking .double-damage::after {
+  background-color: $background-color-bad-damage;
+  text-shadow: $text-shadow-depth 0 $text-shadow-color-bad-damage, 0 $text-shadow-depth $text-shadow-color-bad-damage, $text-shadow-depth $text-shadow-depth $text-shadow-color-bad-damage;
+}
+.attacked-by .no-damage::after {
+  background-color: $background-color-super-bad-damage;
+  text-shadow: $text-shadow-depth 0 $text-shadow-color-super-bad-damage, 0 $text-shadow-depth $text-shadow-color-super-bad-damage, $text-shadow-depth $text-shadow-depth $text-shadow-color-super-bad-damage;
+}
