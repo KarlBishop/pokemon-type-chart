@@ -2,22 +2,68 @@
 layout: default
 ---
 
-<div class="home">
+{% for pokemon in site.pokemon %}
+<article>
 
-  <h1 class="page-heading">Posts</h1>
+  <div class="action attacked-by">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    {% if pokemon.double_damage_from %}
+    <div class="double-damage">
+      {% for type in pokemon.double_damage_from %}
+      <div class="poketype {{ type | downcase }}">{{ type }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    {% if pokemon.half_damage_from %}
+    <div class="half-damage {% if pokemon.name == "Steel" %}thin{% endif %}">
+      {% for type in pokemon.half_damage_from %}
+      <div class="poketype {{ type | downcase }}">{{ type }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    {% if pokemon.no_damage_from %}
+    <div class="no-damage">
+      {% for type in pokemon.no_damage_from %}
+      <div class="poketype {{ type | downcase }}">{{ type }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
 
-</div>
+  </div>
+
+  <div class="subject">
+    <div class="poketype {{ pokemon.name | downcase }}">{{ pokemon.name }}</div>
+  </div>
+
+  <div class="action attacking">
+
+    {% if pokemon.double_damage_to %}
+    <div class="double-damage">
+      {% for type in pokemon.double_damage_to %}
+      <div class="poketype {{ type | downcase }}">{{ type }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if pokemon.half_damage_to %}
+    <div class="half-damage">
+      {% for type in pokemon.half_damage_to %}
+      <div class="poketype {{ type | downcase }}">{{ type }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if pokemon.no_damage_to %}
+    <div class="no-damage">
+      {% for type in pokemon.no_damage_to %}
+      <div class="poketype {{ type | downcase }}">{{ type }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+
+</article>
+{% endfor %}
