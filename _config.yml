@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
+title: Pokemon Type Chart
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -17,5 +17,130 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+pokemon:
+  -
+    name: "Bug"
+    double_damage_from: [ "Fire", "Flying", "Rock" ]
+    half_damage_from: [ "Fight", "Grass", "Ground" ]
+    double_damage_to: [ "Dark", "Grass", "Psychic" ]
+    half_damage_to: [ "Fairy", "Fight", "Fire", "Flying", "Ghost", "Poison", "Steel" ]
+  -
+    name: "Dark"
+    double_damage_from: [ "Bug", "Fairy", "Fight" ]
+    half_damage_from: [ "Dark", "Ghost" ]
+    no_damage_from: [ "Psychic" ]
+    double_damage_to: [ "Ghost", "Psychic" ]
+    half_damage_to: [ "Dark", "Fairy", "Fight" ]
+  -
+    name: "Dragon"
+    double_damage_from: [ "Dragon", "Ice", "Fairy" ]
+    half_damage_from: [ "Elec", "Fire", "Grass", "Water" ]
+    double_damage_to: [ "Dragon" ]
+    half_damage_to: [ "Steel" ]
+    no_damage_to: [ "Fairy" ]
+  -
+    name: "Elec"
+    double_damage_from: [ "Ground" ]
+    half_damage_from: [ "Elec", "Flying", "Steel" ]
+    double_damage_to: [ "Flying", "Water" ]
+    half_damage_to: [ "Dragon", "Elec", "Grass" ]
+    no_damage_to: [ "Ground" ]
+  -
+    name: "Fairy"
+    double_damage_from: [ "Poison", "Steel" ]
+    half_damage_from: [ "Bug", "Dark", "Fight" ]
+    no_damage_from: [ "Dragon" ]
+    double_damage_to: [ "Dark", "Dragon", "Fight" ]
+    half_damage_to: [ "Fire", "Poison", "Steel" ]
+  -
+    name: "Fight"
+    double_damage_from: [ "Fairy", "Flying", "Psychic" ]
+    half_damage_from: [ "Bug", "Dark", "Rock" ]
+    double_damage_to: [ "Dark", "Ice", "Normal", "Rock", "Steel" ]
+    half_damage_to: [ "Bug", "Fairy", "Flying", "Poison", "Psychic" ]
+    no_damage_to: [ "Ghost" ]
+  -
+    name: "Fire"
+    double_damage_from: [ "Ground", "Rock", "Water" ]
+    half_damage_from: [ "Bug", "Fairy", "Fire", "Grass", "Ice", "Steel" ]
+    double_damage_to: [ "Bug", "Grass", "Ice", "Steel" ]
+    half_damage_to: [ "Dragon", "Fire", "Rock", "Water" ]
+  -
+    name: "Flying"
+    double_damage_from: [ "Elec", "Ice", "Rock" ]
+    half_damage_from: [ "Bug", "Fight", "Grass" ]
+    no_damage_from: [ "Ground" ]
+    double_damage_to: [ "Bug", "Fight", "Grass" ]
+    half_damage_to: [ "Elec", "Rock", "Steel" ]
+  -
+    name: "Ghost"
+    double_damage_from: [ "Ghost", "Dark" ]
+    half_damage_from: [ "Bug", "Poison" ]
+    no_damage_from: [ "Normal", "Fight" ]
+    double_damage_to: [ "Ghost", "Psychic" ]
+    half_damage_to: [ "Dark" ]
+    no_damage_to: [ "Normal" ]
+  -
+    name: "Grass"
+    double_damage_from: [ "Bug", "Fire", "Flying", "Ice", "Poison" ]
+    half_damage_from: [ "Elec", "Grass", "Ground", "Water" ]
+    double_damage_to: [ "Ground", "Rock", "Water" ]
+    half_damage_to: [ "Bug", "Dragon", "Fire", "Flying", "Grass", "Poison", "Steel" ]
+  -
+    name: "Ground"
+    double_damage_from: [ "Grass", "Ice", "Water" ]
+    half_damage_from: [ "Poison", "Rock" ]
+    no_damage_from: [ "Elec" ]
+    double_damage_to: [ "Elec", "Fire", "Poison", "Rock", "Steel" ]
+    half_damage_to: [ "Bug", "Grass" ]
+    no_damage_to: [ "Flying" ]
+  -
+    name: "Ice"
+    double_damage_from: [ "Fight", "Fire", "Rock", "Steel" ]
+    half_damage_from: [ "Ice" ]
+    double_damage_to: [ "Dragon", "Flying", "Grass", "Ground" ]
+    half_damage_to: [ "Fire", "Ice", "Steel", "Water" ]
+  -
+    name: "Normal"
+    double_damage_from: [ "Fight" ]
+    no_damage_from: [ "Ghost" ]
+    half_damage_to: [ "Rock", "Steel" ]
+    no_damage_to: [ "Ghost" ]
+  -
+    name: "Poison"
+    double_damage_from: [ "Ground", "Psychic" ]
+    half_damage_from: [ "Bug", "Fairy", "Fight", "Grass", "Poison" ]
+    double_damage_to: [ "Grass", "Fairy" ]
+    half_damage_to: [ "Ghost", "Ground", "Poison", "Rock" ]
+    no_damage_to: [ "Steel" ]
+  -
+    name: "Psychic"
+    double_damage_from: [ "Bug", "Dark", "Ghost" ]
+    half_damage_from: [ "Fight", "Psychic" ]
+    double_damage_to: [ "Fight", "Poison" ]
+    half_damage_to: [ "Psychic", "Steel" ]
+    no_damage_to: [ "Dark" ]
+  -
+    name: "Rock"
+    double_damage_from: [ "Fight", "Grass", "Ground", "Steel", "Water" ]
+    half_damage_from: [ "Fire", "Flying", "Normal", "Poison" ]
+    double_damage_to: [ "Bug", "Fire", "Flying", "Ice" ]
+    half_damage_to: [ "Fight", "Ground", "Steel" ]
+  -
+    name: "Steel"
+    double_damage_from: [ "Fight", "Fire", "Ground" ]
+    half_damage_from: [ "Bug", "Dragon", "Fairy", "Flying", "Grass", "Ice", "Normal", "Psychic", "Rock", "Steel" ]
+    no_damage_from: [ "Poison" ]
+    double_damage_to: [ "Fairy", "Ice", "Rock" ]
+    half_damage_to: [ "Elec", "Fire", "Steel", "Water" ]
+  -
+    name: "Water"
+    double_damage_from: [ "Elec", "Grass" ]
+    half_damage_from: [ "Fire", "Ice", "Steel", "Water" ]
+    double_damage_to: [ "Fire", "Ground", "Rock" ]
+    half_damage_to: [ "Dragon", "Grass", "Water" ]
+
 # Build settings
 markdown: kramdown
+
+# Collections
