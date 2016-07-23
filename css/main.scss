@@ -20,8 +20,15 @@ $text-shadow-color-super-good-damage: #040;
 $text-shadow-color-bad-damage: #d44;
 $text-shadow-color-super-bad-damage: #800;
 
-@mixin text-shadow($depth, $color) {
+@mixin basic-text-shadow($depth, $color) {
+  text-shadow: $depth $depth $color;
+}
+
+@mixin complex-text-shadow($depth, $color) {
   text-shadow: $depth 0 $color, 0 $depth $color, $depth $depth $color;
+  @media only screen and (max-width: 46.5em) {
+    @include basic-text-shadow($text-shadow-depth, $color);
+  }
 }
 
 // FONT
@@ -80,7 +87,7 @@ article, footer, header, main, section {
   min-width: 6em;
   padding: .6em 0;
   text-align: center;
-  @include text-shadow($text-shadow-depth, $text-shadow-color);
+  @include complex-text-shadow($text-shadow-depth, $text-shadow-color);
   text-transform: uppercase;
 }
 .small .poketype {
@@ -94,7 +101,7 @@ article, footer, header, main, section {
   font-size: 2em;
   min-width: 0;
   padding: 1.3333333em 0;
-  @include text-shadow($text-shadow-depth * 2, $text-shadow-color);
+  @include complex-text-shadow($text-shadow-depth * 2, $text-shadow-color);
 }
 
 // COLOURS
@@ -179,7 +186,7 @@ section {
     background-repeat: no-repeat;
     content: "";
     display: block;
-    height: 6px;
+    height: .66666666rem;
     opacity: .6;
     position: absolute;
     top: 50%;
@@ -214,7 +221,7 @@ section {
       right: -4.5em;
     }
     &::after {
-      right: calc(-4.5rem + 2px);
+      right: calc(-4.5rem + .22222222rem);
       transform: translate(-50%, -50%);
     }
   }
@@ -227,7 +234,7 @@ section {
       left: -4.5em;
     }
     &::after {
-      left: calc(-4.5rem - 2px);
+      left: calc(-4.5rem - .22222222rem);
       transform: translate(50%, -50%);
     }
   }
@@ -236,21 +243,21 @@ section {
 .attacked-by .double::after,
 .attacking .half::after {
   background-color: $background-color-good-damage;
-  @include text-shadow($text-shadow-depth, $text-shadow-color-good-damage);
+  @include complex-text-shadow($text-shadow-depth, $text-shadow-color-good-damage);
 }
 
 .attacking .none::after {
   background-color: $background-color-super-good-damage;
-  @include text-shadow($text-shadow-depth, $text-shadow-color-super-good-damage);
+  @include complex-text-shadow($text-shadow-depth, $text-shadow-color-super-good-damage);
 }
 
 .attacked-by .half::after,
 .attacking .double::after {
   background-color: $background-color-bad-damage;
-  @include text-shadow($text-shadow-depth, $text-shadow-color-bad-damage);
+  @include complex-text-shadow($text-shadow-depth, $text-shadow-color-bad-damage);
 }
 
 .attacked-by .none::after {
   background-color: $background-color-super-bad-damage;
-  @include text-shadow($text-shadow-depth, $text-shadow-color-super-bad-damage);
+  @include complex-text-shadow($text-shadow-depth, $text-shadow-color-super-bad-damage);
 }
