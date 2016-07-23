@@ -135,17 +135,13 @@ article {
       width: 2.25rem;
     }
     &::before {
-      background-image: linear-gradient(to right, transparent 36px, white 36px),
-        linear-gradient(to bottom, transparent, transparent 3px, $arrow-color 3px, $arrow-color 4px, transparent 4px);
-      content: "\25BA";
-      color: $arrow-color;
+      background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%205%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M0%202h34V0l5%202.5L34%205V3H0z%22%2F%3E%3C%2Fsvg%3E);
+      background-repeat: no-repeat;
+      content: "";
       display: block;
-      font-family: Arial;
-      font-size: 7px;
       height: 6px;
-      line-height: 1;
+      opacity: .6;
       position: absolute;
-      text-align: right;
       top: 50%;
       transform: translateY(-50%);
       width: 40px;
