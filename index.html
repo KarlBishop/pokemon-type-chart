@@ -5,65 +5,29 @@ layout: default
 {% for pokemon in site.pokemon %}
 <article>
 
-  <div class="action attacked-by">
+  <section class="matchup attacked-by">
+    {% for damage in pokemon.damage_from %}
+      <div class="damage {{ damage.amount }} {% if damage.types.size > 5 %}small{% endif %}">
+        {% for type in damage.types %}
+        <div class="poketype {{ type | downcase }}">{{ type }}</div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
 
-    {% if pokemon.double_damage_from %}
-    <div class="double-damage">
-      {% for type in pokemon.double_damage_from %}
-      <div class="poketype {{ type | downcase }}">{{ type }}</div>
-      {% endfor %}
-    </div>
-    {% endif %}
-
-    {% if pokemon.half_damage_from %}
-    <div class="half-damage {% if pokemon.name == "Steel" %}thin{% endif %}">
-      {% for type in pokemon.half_damage_from %}
-      <div class="poketype {{ type | downcase }}">{{ type }}</div>
-      {% endfor %}
-    </div>
-    {% endif %}
-
-    {% if pokemon.no_damage_from %}
-    <div class="no-damage">
-      {% for type in pokemon.no_damage_from %}
-      <div class="poketype {{ type | downcase }}">{{ type }}</div>
-      {% endfor %}
-    </div>
-    {% endif %}
-
-  </div>
-
-  <div class="subject">
+  <section class="subject big">
     <div class="poketype {{ pokemon.name | downcase }}">{{ pokemon.name }}</div>
-  </div>
+  </section>
 
-  <div class="action attacking">
-
-    {% if pokemon.double_damage_to %}
-    <div class="double-damage">
-      {% for type in pokemon.double_damage_to %}
-      <div class="poketype {{ type | downcase }}">{{ type }}</div>
-      {% endfor %}
-    </div>
-    {% endif %}
-
-    {% if pokemon.half_damage_to %}
-    <div class="half-damage">
-      {% for type in pokemon.half_damage_to %}
-      <div class="poketype {{ type | downcase }}">{{ type }}</div>
-      {% endfor %}
-    </div>
-    {% endif %}
-
-    {% if pokemon.no_damage_to %}
-    <div class="no-damage">
-      {% for type in pokemon.no_damage_to %}
-      <div class="poketype {{ type | downcase }}">{{ type }}</div>
-      {% endfor %}
-    </div>
-    {% endif %}
-
-  </div>
+  <section class="matchup attacking">
+    {% for damage in pokemon.damage_to %}
+      <div class="damage {{ damage.amount }} {% if damage.types.size > 5 %}small{% endif %}">
+        {% for type in damage.types %}
+        <div class="poketype {{ type | downcase }}">{{ type }}</div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
 
 </article>
 {% endfor %}
