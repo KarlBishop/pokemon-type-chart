@@ -20,127 +20,331 @@ github_username:  jekyll
 pokemon:
   -
     name: "Bug"
-    double_damage_from: [ "Fire", "Flying", "Rock" ]
-    half_damage_from: [ "Fight", "Grass", "Ground" ]
-    double_damage_to: [ "Dark", "Grass", "Psychic" ]
-    half_damage_to: [ "Fairy", "Fight", "Fire", "Flying", "Ghost", "Poison", "Steel" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Fire", "Flying", "Rock" ]
+      -
+        amount: "half"
+        types: [ "Fight", "Grass", "Ground" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Dark", "Grass", "Psychic" ]
+      -
+        amount: "half"
+        types: [ "Fairy", "Fight", "Fire", "Flying", "Ghost", "Poison", "Steel" ]
   -
     name: "Dark"
-    double_damage_from: [ "Bug", "Fairy", "Fight" ]
-    half_damage_from: [ "Dark", "Ghost" ]
-    no_damage_from: [ "Psychic" ]
-    double_damage_to: [ "Ghost", "Psychic" ]
-    half_damage_to: [ "Dark", "Fairy", "Fight" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Bug", "Fairy", "Fight" ]
+      -
+        amount: "half"
+        types: [ "Dark", "Ghost" ]
+      -
+        amount: "none"
+        types: [ "Psychic" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Ghost", "Psychic" ]
+      -
+        amount: "half"
+        types: [ "Dark", "Fairy", "Fight" ]
   -
     name: "Dragon"
-    double_damage_from: [ "Dragon", "Ice", "Fairy" ]
-    half_damage_from: [ "Elec", "Fire", "Grass", "Water" ]
-    double_damage_to: [ "Dragon" ]
-    half_damage_to: [ "Steel" ]
-    no_damage_to: [ "Fairy" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Dragon", "Ice", "Fairy" ]
+      -
+        amount: "half"
+        types: [ "Elec", "Fire", "Grass", "Water" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Dragon" ]
+      -
+        amount: "half"
+        types: [ "Steel" ]
+      -
+        amount: "none"
+        types: [ "Fairy" ]
   -
     name: "Elec"
-    double_damage_from: [ "Ground" ]
-    half_damage_from: [ "Elec", "Flying", "Steel" ]
-    double_damage_to: [ "Flying", "Water" ]
-    half_damage_to: [ "Dragon", "Elec", "Grass" ]
-    no_damage_to: [ "Ground" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Ground" ]
+      -
+        amount: "half"
+        types: [ "Elec", "Flying", "Steel" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Flying", "Water" ]
+      -
+        amount: "half"
+        types: [ "Dragon", "Elec", "Grass" ]
+      -
+        amount: "none"
+        types: [ "Ground" ]
   -
     name: "Fairy"
-    double_damage_from: [ "Poison", "Steel" ]
-    half_damage_from: [ "Bug", "Dark", "Fight" ]
-    no_damage_from: [ "Dragon" ]
-    double_damage_to: [ "Dark", "Dragon", "Fight" ]
-    half_damage_to: [ "Fire", "Poison", "Steel" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Poison", "Steel" ]
+      -
+        amount: "half"
+        types: [ "Bug", "Dark", "Fight" ]
+      -
+        amount: "none"
+        types: [ "Dragon" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Dark", "Dragon", "Fight" ]
+      -
+        amount: "half"
+        types: [ "Fire", "Poison", "Steel" ]
   -
     name: "Fight"
-    double_damage_from: [ "Fairy", "Flying", "Psychic" ]
-    half_damage_from: [ "Bug", "Dark", "Rock" ]
-    double_damage_to: [ "Dark", "Ice", "Normal", "Rock", "Steel" ]
-    half_damage_to: [ "Bug", "Fairy", "Flying", "Poison", "Psychic" ]
-    no_damage_to: [ "Ghost" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Fairy", "Flying", "Psychic" ]
+      -
+        amount: "half"
+        types: [ "Bug", "Dark", "Rock" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Dark", "Ice", "Normal", "Rock", "Steel" ]
+      -
+        amount: "half"
+        types: [ "Bug", "Fairy", "Flying", "Poison", "Psychic" ]
+      -
+        amount: "none"
+        types: [ "Ghost" ]
   -
     name: "Fire"
-    double_damage_from: [ "Ground", "Rock", "Water" ]
-    half_damage_from: [ "Bug", "Fairy", "Fire", "Grass", "Ice", "Steel" ]
-    double_damage_to: [ "Bug", "Grass", "Ice", "Steel" ]
-    half_damage_to: [ "Dragon", "Fire", "Rock", "Water" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Ground", "Rock", "Water" ]
+      -
+        amount: "half"
+        types: [ "Bug", "Fairy", "Fire", "Grass", "Ice", "Steel" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Bug", "Grass", "Ice", "Steel" ]
+      -
+        amount: "half"
+        types: [ "Dragon", "Fire", "Rock", "Water" ]
   -
     name: "Flying"
-    double_damage_from: [ "Elec", "Ice", "Rock" ]
-    half_damage_from: [ "Bug", "Fight", "Grass" ]
-    no_damage_from: [ "Ground" ]
-    double_damage_to: [ "Bug", "Fight", "Grass" ]
-    half_damage_to: [ "Elec", "Rock", "Steel" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Elec", "Ice", "Rock" ]
+      -
+        amount: "half"
+        types: [ "Bug", "Fight", "Grass" ]
+      -
+        amount: "none"
+        types: [ "Ground" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Bug", "Fight", "Grass" ]
+      -
+        amount: "half"
+        types: [ "Elec", "Rock", "Steel" ]
   -
     name: "Ghost"
-    double_damage_from: [ "Ghost", "Dark" ]
-    half_damage_from: [ "Bug", "Poison" ]
-    no_damage_from: [ "Normal", "Fight" ]
-    double_damage_to: [ "Ghost", "Psychic" ]
-    half_damage_to: [ "Dark" ]
-    no_damage_to: [ "Normal" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Ghost", "Dark" ]
+      -
+        amount: "half"
+        types: [ "Bug", "Poison" ]
+      -
+        amount: "none"
+        types: [ "Normal", "Fight" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Ghost", "Psychic" ]
+      -
+        amount: "half"
+        types: [ "Dark" ]
+      -
+        amount: "none"
+        types: [ "Normal" ]
   -
     name: "Grass"
-    double_damage_from: [ "Bug", "Fire", "Flying", "Ice", "Poison" ]
-    half_damage_from: [ "Elec", "Grass", "Ground", "Water" ]
-    double_damage_to: [ "Ground", "Rock", "Water" ]
-    half_damage_to: [ "Bug", "Dragon", "Fire", "Flying", "Grass", "Poison", "Steel" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Bug", "Fire", "Flying", "Ice", "Poison" ]
+      -
+        amount: "half"
+        types: [ "Elec", "Grass", "Ground", "Water" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Ground", "Rock", "Water" ]
+      -
+        amount: "half"
+        types: [ "Bug", "Dragon", "Fire", "Flying", "Grass", "Poison", "Steel" ]
   -
     name: "Ground"
-    double_damage_from: [ "Grass", "Ice", "Water" ]
-    half_damage_from: [ "Poison", "Rock" ]
-    no_damage_from: [ "Elec" ]
-    double_damage_to: [ "Elec", "Fire", "Poison", "Rock", "Steel" ]
-    half_damage_to: [ "Bug", "Grass" ]
-    no_damage_to: [ "Flying" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Grass", "Ice", "Water" ]
+      -
+        amount: "half"
+        types: [ "Poison", "Rock" ]
+      -
+        amount: "none"
+        types: [ "Elec" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Elec", "Fire", "Poison", "Rock", "Steel" ]
+      -
+        amount: "half"
+        types: [ "Bug", "Grass" ]
+      -
+        amount: "none"
+        types: [ "Flying" ]
   -
     name: "Ice"
-    double_damage_from: [ "Fight", "Fire", "Rock", "Steel" ]
-    half_damage_from: [ "Ice" ]
-    double_damage_to: [ "Dragon", "Flying", "Grass", "Ground" ]
-    half_damage_to: [ "Fire", "Ice", "Steel", "Water" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Fight", "Fire", "Rock", "Steel" ]
+      -
+        amount: "half"
+        types: [ "Ice" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Dragon", "Flying", "Grass", "Ground" ]
+      -
+        amount: "half"
+        types: [ "Fire", "Ice", "Steel", "Water" ]
   -
     name: "Normal"
-    double_damage_from: [ "Fight" ]
-    no_damage_from: [ "Ghost" ]
-    half_damage_to: [ "Rock", "Steel" ]
-    no_damage_to: [ "Ghost" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Fight" ]
+      -
+        amount: "none"
+        types: [ "Ghost" ]
+    damage_to:
+      -
+        amount: "half"
+        types: [ "Rock", "Steel" ]
+      -
+        amount: "none"
+        types: [ "Ghost" ]
   -
     name: "Poison"
-    double_damage_from: [ "Ground", "Psychic" ]
-    half_damage_from: [ "Bug", "Fairy", "Fight", "Grass", "Poison" ]
-    double_damage_to: [ "Grass", "Fairy" ]
-    half_damage_to: [ "Ghost", "Ground", "Poison", "Rock" ]
-    no_damage_to: [ "Steel" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Ground", "Psychic" ]
+      -
+        amount: "half"
+        types: [ "Bug", "Fairy", "Fight", "Grass", "Poison" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Grass", "Fairy" ]
+      -
+        amount: "half"
+        types: [ "Ghost", "Ground", "Poison", "Rock" ]
+      -
+        amount: "none"
+        types: [ "Steel" ]
   -
     name: "Psychic"
-    double_damage_from: [ "Bug", "Dark", "Ghost" ]
-    half_damage_from: [ "Fight", "Psychic" ]
-    double_damage_to: [ "Fight", "Poison" ]
-    half_damage_to: [ "Psychic", "Steel" ]
-    no_damage_to: [ "Dark" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Bug", "Dark", "Ghost" ]
+      -
+        amount: "half"
+        types: [ "Fight", "Psychic" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Fight", "Poison" ]
+      -
+        amount: "half"
+        types: [ "Psychic", "Steel" ]
+      -
+        amount: "none"
+        types: [ "Dark" ]
   -
     name: "Rock"
-    double_damage_from: [ "Fight", "Grass", "Ground", "Steel", "Water" ]
-    half_damage_from: [ "Fire", "Flying", "Normal", "Poison" ]
-    double_damage_to: [ "Bug", "Fire", "Flying", "Ice" ]
-    half_damage_to: [ "Fight", "Ground", "Steel" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Fight", "Grass", "Ground", "Steel", "Water" ]
+      -
+        amount: "half"
+        types: [ "Fire", "Flying", "Normal", "Poison" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Bug", "Fire", "Flying", "Ice" ]
+      -
+        amount: "half"
+        types: [ "Fight", "Ground", "Steel" ]
   -
     name: "Steel"
-    double_damage_from: [ "Fight", "Fire", "Ground" ]
-    half_damage_from: [ "Bug", "Dragon", "Fairy", "Flying", "Grass", "Ice", "Normal", "Psychic", "Rock", "Steel" ]
-    no_damage_from: [ "Poison" ]
-    double_damage_to: [ "Fairy", "Ice", "Rock" ]
-    half_damage_to: [ "Elec", "Fire", "Steel", "Water" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Fight", "Fire", "Ground" ]
+      -
+        amount: "half"
+        types: [ "Bug", "Dragon", "Fairy", "Flying", "Grass", "Ice", "Normal", "Psychic", "Rock", "Steel" ]
+      -
+        amount: "none"
+        types: [ "Poison" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Fairy", "Ice", "Rock" ]
+      -
+        amount: "half"
+        types: [ "Elec", "Fire", "Steel", "Water" ]
   -
     name: "Water"
-    double_damage_from: [ "Elec", "Grass" ]
-    half_damage_from: [ "Fire", "Ice", "Steel", "Water" ]
-    double_damage_to: [ "Fire", "Ground", "Rock" ]
-    half_damage_to: [ "Dragon", "Grass", "Water" ]
+    damage_from:
+      -
+        amount: "double"
+        types: [ "Elec", "Grass" ]
+      -
+        amount: "half"
+        types: [ "Fire", "Ice", "Steel", "Water" ]
+    damage_to:
+      -
+        amount: "double"
+        types: [ "Fire", "Ground", "Rock" ]
+      -
+        amount: "half"
+        types: [ "Dragon", "Grass", "Water" ]
 
 # Build settings
 markdown: kramdown
-
-# Collections
