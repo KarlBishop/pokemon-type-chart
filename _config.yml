@@ -343,3 +343,13 @@ pokemon:
 
 # Build settings
 markdown: kramdown
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: [html, head, body]
+  profile: true
