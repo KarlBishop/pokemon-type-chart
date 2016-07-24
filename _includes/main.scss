@@ -48,6 +48,9 @@ html {
   @media only screen and (max-width: 46.5em) {
     font-size: 1.2vw;
   }
+  @media only screen and (min-width: 100em) {
+    font-size: 0.566vw;
+  }
 }
 
 body {
@@ -55,6 +58,12 @@ body {
   font-size: 1em;
   line-height: 1.42857143;
   margin: 0;
+  @media only screen and (min-width: 90em) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+  }
 }
 
 article, footer, header, main, section {
@@ -130,7 +139,7 @@ main {
   flex-direction: column;
   @media only screen and (min-width: 90em) {
     flex-wrap: wrap;
-    height: 73em;
+    height: 74em;
     margin-left: -8em;
   }
 }
