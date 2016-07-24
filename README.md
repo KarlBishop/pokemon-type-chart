@@ -1,5 +1,7 @@
 # pokemon-type-chart
 Type Matchup Chart, showing how modifiers are applied when attacking Pokémon of different types
+Responsive HTML version: https://karlbishop.github.io/pokemon-type-chart/
+PNG version: https://karlbishop.github.io/pokemon-type-chart/images/pokemon-type-chart.png
 
 *Other good charts*:
 Pokemon Database: http://pokemondb.net/type
