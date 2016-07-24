@@ -269,6 +269,13 @@ section {
 }
 
 footer {
-  padding: 2em;
+  font-size: 2em;
   text-align: center;
+  a {
+    display: block;
+    padding: 2em;
+  }
+  @media only screen and (min-width: 90em) {
+    font-size: 1em;
+  }
 }
