@@ -258,3 +258,8 @@ section {
   background-color: $background-color-super-bad-damage;
   @include complex-text-shadow($text-shadow-depth, $text-shadow-color-super-bad-damage);
 }
+
+footer {
+  padding: 2em;
+  text-align: center;
+}
