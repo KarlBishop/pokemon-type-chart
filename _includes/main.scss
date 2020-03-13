@@ -46,9 +46,9 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   @media only screen and (max-width: 46.5em) {
-    font-size: 1.14vw;
-    &.gen6 {
-      font-size: 1.2vw;
+    font-size: 1.2vw;
+    &.pogo_old {
+      font-size: 1.14vw;
     }
   }
   @media only screen and (min-width: 100em) {
@@ -62,20 +62,11 @@ body {
   line-height: 1.42857143;
   margin: 0;
 
-  @media only screen and (min-width: 91.25em) {
+  @media only screen and (min-width: 90em) {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     min-height: 100vh;
-  }
-
-  .gen6 & {
-    @media only screen and (min-width: 90em) {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      min-height: 100vh;
-    }
   }
 }
 
@@ -103,16 +94,15 @@ article, footer, header, main, section {
   box-shadow: inset 0 $box-shadow-depth $box-shadow-color-highlight, inset 0 (-$box-shadow-depth) $box-shadow-color;
   color: #fff;
   display: inline-block;
-  font-size: 1.2em;
-  min-width: 5.2em;
+  min-width: 6em;
   padding: .6em 0;
   text-align: center;
   @include complex-text-shadow($text-shadow-depth, $text-shadow-color);
   text-transform: uppercase;
 
-  .gen6 & {
-    font-size: 1em;
-    min-width: 6em;
+  .pogo_old & {
+    font-size: 1.2em;
+    min-width: 5.2em;
   }
 
 }
@@ -159,16 +149,13 @@ main {
   align-items: center;
   display: flex;
   flex-direction: column;
-  @media only screen and (min-width: 91.25em) {
+
+  @media only screen and (min-width: 90em) {
     flex-wrap: wrap;
     height: 74em;
-    margin-left: -7em;
-  }
-  .gen6 & {
-    @media only screen and (min-width: 90em) {
-      flex-wrap: wrap;
-      height: 74em;
-      margin-left: -8em;
+    margin-left: -8em;
+    .pogo_old & {
+      margin-left: -7em;
     }
   }
 }
@@ -177,15 +164,13 @@ article {
   display: flex;
   max-width: 88em;
   width: 100%;
-  @media only screen and (min-width: 91.25em) {
+
+  @media only screen and (min-width: 90em) {
     &:nth-child(n+10) {
-      transform: (translateX(-7em));
-    }
-  }
-  .gen6 & {
-    @media only screen and (min-width: 90em) {
-      &:nth-child(n+10) {
-        transform: (translateX(-8em));
+      transform: (translateX(-8em));
+
+      .pogo_old & {
+        transform: (translateX(-7em));
       }
     }
   }
@@ -200,18 +185,18 @@ section {
 // MATCHUP DETAILS
 
 .matchup {
-  width: 39%;
-  .gen6 & {
-    width: 37%;
+  width: 37%;
+  .pogo_old & {
+    width: 39%;
   }
 }
 
 .subject {
-  padding: 0 3.5em;
-  width: 22%;
-  .gen6 & {
-    padding: 0 4.5em;
-    width: 26%;
+  padding: 0 4.5em;
+  width: 26%;
+  .pogo_old & {
+    padding: 0 3.5em;
+    width: 22%;
   }
 }
 
@@ -223,18 +208,18 @@ section {
     box-shadow: inset 0 $box-shadow-depth ($box-shadow-depth * 4) $box-shadow-color-highlight, inset 0 (-$box-shadow-depth) ($box-shadow-depth * 4) $box-shadow-color;
     color: white;
     display: block;
-    height: 2rem;
-    line-height: 2rem;
+    height: 2.25rem;
+    line-height: 2.25rem;
     position: absolute;
     text-align: center;
-    top: 49%;
-    width: 2rem;
+    top: 50%;
+    width: 2.25rem;
 
-    .gen6 & {
-      height: 2.25rem;
-      line-height: 2.25rem;
-      top: 50%;
-      width: 2.25rem;
+    .pogo_old & {
+      height: 2rem;
+      line-height: 2rem;
+      top: 49%;
+      width: 2rem;
     }
   }
   &::before {
@@ -247,10 +232,10 @@ section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 3.5rem;
+    width: 4.5rem;
 
-    .gen6 & {
-      width: 4.5rem;
+    .pogo_old & {
+      width: 3.5rem;
     }
   }
   &:empty::after, &:empty::before {
@@ -275,25 +260,26 @@ section {
 }
 
 .none::after {
-  //background-color: #888;
-  content: "O";
-  //text-shadow: .125em 0 #333, 0 .125em #333, .125em .125em #333;
+  content: "I";
+  .gen6 & {
+    content: "O";
+  }
 }
 
 .attacked-by {
   .damage {
     justify-content: flex-end;
     &::before {
-      right: -3.5em;
-      .gen6 & {
-        right: -4.5em;
+      right: -4.5em;
+      .pogo_old & {
+        right: -3.5em;
       }
     }
     &::after {
-      right: -3.5rem;
+      right: calc(-4.5rem + .22222222rem);
       transform: translate(-50%, -50%);
-      .gen6 & {
-        right: calc(-4.5rem + .22222222rem);
+      .pogo_old & {
+        right: -3.5rem;
       }
     }
   }
@@ -303,16 +289,16 @@ section {
   .damage {
     justify-content: flex-start;
     &::before {
-      left: -3.5em;
-      .gen6 & {
-        left: -4.5em;
+      left: -4.5em;
+      .pogo_old & {
+        left: -3.5em;
       }
     }
     &::after {
-      left: -4rem;
+      left: calc(-4.5rem - .22222222rem);
       transform: translate(50%, -50%);
-      .gen6 & {
-        left: calc(-4.5rem - .22222222rem);
+      .pogo_old & {
+        left: -4rem;
       }
     }
   }

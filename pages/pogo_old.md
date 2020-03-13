@@ -1,6 +1,6 @@
 ---
 layout: type_chart
-permalink: /
+permalink: /pogo_old
 title: Pokémon Go Type Matchup Chart
 description: Shows how damage modifiers are applied when attacking and defending against Pokémon of different types in Pokémon Go
 pokemon:
@@ -28,10 +28,7 @@ pokemon:
         types: [ "Bug", "Fairy", "Fight" ]
       -
         amount: "half"
-        types: [ "Dark", "Ghost" ]
-      -
-        amount: "none"
-        types: [ "Psychic" ]
+        types: [ "Dark", "Ghost", "Psychic" ]
     damage_to:
       -
         amount: "double"
@@ -54,10 +51,7 @@ pokemon:
         types: [ "Dragon" ]
       -
         amount: "half"
-        types: [ "Steel" ]
-      -
-        amount: "none"
-        types: [ "Fairy" ]
+        types: [ "Fairy", "Steel" ]
   -
     name: "Elec"
     damage_from:
@@ -73,10 +67,7 @@ pokemon:
         types: [ "Flying", "Water" ]
       -
         amount: "half"
-        types: [ "Dragon", "Elec", "Grass" ]
-      -
-        amount: "none"
-        types: [ "Ground" ]
+        types: [ "Dragon", "Elec", "Grass", "Ground" ]
   -
     name: "Fairy"
     damage_from:
@@ -85,10 +76,7 @@ pokemon:
         types: [ "Poison", "Steel" ]
       -
         amount: "half"
-        types: [ "Bug", "Dark", "Fight" ]
-      -
-        amount: "none"
-        types: [ "Dragon" ]
+        types: [ "Bug", "Dark", "Dragon", "Fight" ]
     damage_to:
       -
         amount: "double"
@@ -111,10 +99,7 @@ pokemon:
         types: [ "Dark", "Ice", "Normal", "Rock", "Steel" ]
       -
         amount: "half"
-        types: [ "Bug", "Fairy", "Flying", "Poison", "Psychic" ]
-      -
-        amount: "none"
-        types: [ "Ghost" ]
+        types: [ "Bug", "Fairy", "Flying", "Ghost", "Poison", "Psychic" ]
   -
     name: "Fire"
     damage_from:
@@ -139,10 +124,7 @@ pokemon:
         types: [ "Elec", "Ice", "Rock" ]
       -
         amount: "half"
-        types: [ "Bug", "Fight", "Grass" ]
-      -
-        amount: "none"
-        types: [ "Ground" ]
+        types: [ "Bug", "Fight", "Grass", "Ground" ]
     damage_to:
       -
         amount: "double"
@@ -158,20 +140,14 @@ pokemon:
         types: [ "Ghost", "Dark" ]
       -
         amount: "half"
-        types: [ "Bug", "Poison" ]
-      -
-        amount: "none"
-        types: [ "Normal", "Fight" ]
+        types: [ "Bug", "Normal", "Fight", "Poison" ]
     damage_to:
       -
         amount: "double"
         types: [ "Ghost", "Psychic" ]
       -
         amount: "half"
-        types: [ "Dark" ]
-      -
-        amount: "none"
-        types: [ "Normal" ]
+        types: [ "Dark", "Normal" ]
   -
     name: "Grass"
     damage_from:
@@ -196,20 +172,14 @@ pokemon:
         types: [ "Grass", "Ice", "Water" ]
       -
         amount: "half"
-        types: [ "Poison", "Rock" ]
-      -
-        amount: "none"
-        types: [ "Elec" ]
+        types: [ "Elec", "Poison", "Rock" ]
     damage_to:
       -
         amount: "double"
         types: [ "Elec", "Fire", "Poison", "Rock", "Steel" ]
       -
         amount: "half"
-        types: [ "Bug", "Grass" ]
-      -
-        amount: "none"
-        types: [ "Flying" ]
+        types: [ "Bug", "Flying", "Grass" ]
   -
     name: "Ice"
     damage_from:
@@ -233,15 +203,12 @@ pokemon:
         amount: "double"
         types: [ "Fight" ]
       -
-        amount: "none"
+        amount: "half"
         types: [ "Ghost" ]
     damage_to:
       -
         amount: "half"
-        types: [ "Rock", "Steel" ]
-      -
-        amount: "none"
-        types: [ "Ghost" ]
+        types: [ "Ghost", "Rock", "Steel" ]
   -
     name: "Poison"
     damage_from:
@@ -257,10 +224,7 @@ pokemon:
         types: [ "Grass", "Fairy" ]
       -
         amount: "half"
-        types: [ "Ghost", "Ground", "Poison", "Rock" ]
-      -
-        amount: "none"
-        types: [ "Steel" ]
+        types: [ "Ghost", "Ground", "Poison", "Rock", "Steel" ]
   -
     name: "Psychic"
     damage_from:
@@ -276,10 +240,7 @@ pokemon:
         types: [ "Fight", "Poison" ]
       -
         amount: "half"
-        types: [ "Psychic", "Steel" ]
-      -
-        amount: "none"
-        types: [ "Dark" ]
+        types: [ "Dark", "Psychic", "Steel" ]
   -
     name: "Rock"
     damage_from:
@@ -304,10 +265,7 @@ pokemon:
         types: [ "Fight", "Fire", "Ground" ]
       -
         amount: "half"
-        types: [ "Bug", "Dragon", "Fairy", "Flying", "Grass", "Ice", "Normal", "Psychic", "Rock", "Steel" ]
-      -
-        amount: "none"
-        types: [ "Poison" ]
+        types: [ "Bug", "Dragon", "Fairy", "Flying", "Grass", "Ice", "Normal", "Poison", "Psychic", "Rock", "Steel" ]
     damage_to:
       -
         amount: "double"
