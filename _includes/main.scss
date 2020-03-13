@@ -47,6 +47,9 @@ html {
   -ms-text-size-adjust: 100%;
   @media only screen and (max-width: 46.5em) {
     font-size: 1.14vw;
+    &.gen6 {
+      font-size: 1.2vw;
+    }
   }
   @media only screen and (min-width: 100em) {
     font-size: 0.566vw;
@@ -58,11 +61,21 @@ body {
   font-size: 1em;
   line-height: 1.42857143;
   margin: 0;
+
   @media only screen and (min-width: 91.25em) {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     min-height: 100vh;
+  }
+
+  .gen6 & {
+    @media only screen and (min-width: 90em) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      min-height: 100vh;
+    }
   }
 }
 
@@ -96,7 +109,14 @@ article, footer, header, main, section {
   text-align: center;
   @include complex-text-shadow($text-shadow-depth, $text-shadow-color);
   text-transform: uppercase;
+
+  .gen6 & {
+    font-size: 1em;
+    min-width: 6em;
+  }
+
 }
+
 .small .poketype {
   min-width: 0;
   max-width: 3.6666666em;
@@ -104,6 +124,7 @@ article, footer, header, main, section {
   padding: .6em .4em;
   text-overflow: clip;
 }
+
 .big .poketype {
   font-size: 2em;
   min-width: 0;
@@ -143,6 +164,13 @@ main {
     height: 74em;
     margin-left: -7em;
   }
+  .gen6 & {
+    @media only screen and (min-width: 90em) {
+      flex-wrap: wrap;
+      height: 74em;
+      margin-left: -8em;
+    }
+  }
 }
 
 article {
@@ -152,6 +180,13 @@ article {
   @media only screen and (min-width: 91.25em) {
     &:nth-child(n+10) {
       transform: (translateX(-7em));
+    }
+  }
+  .gen6 & {
+    @media only screen and (min-width: 90em) {
+      &:nth-child(n+10) {
+        transform: (translateX(-8em));
+      }
     }
   }
 }
@@ -166,11 +201,18 @@ section {
 
 .matchup {
   width: 39%;
+  .gen6 & {
+    width: 37%;
+  }
 }
 
 .subject {
   padding: 0 3.5em;
   width: 22%;
+  .gen6 & {
+    padding: 0 4.5em;
+    width: 26%;
+  }
 }
 
 .damage {
@@ -187,6 +229,13 @@ section {
     text-align: center;
     top: 49%;
     width: 2rem;
+
+    .gen6 & {
+      height: 2.25rem;
+      line-height: 2.25rem;
+      top: 50%;
+      width: 2.25rem;
+    }
   }
   &::before {
     background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%205%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M0%202h34V0l5%202.5L34%205V3H0z%22%2F%3E%3C%2Fsvg%3E);
@@ -199,6 +248,10 @@ section {
     top: 50%;
     transform: translateY(-50%);
     width: 3.5rem;
+
+    .gen6 & {
+      width: 4.5rem;
+    }
   }
   &:empty::after, &:empty::before {
     display: none;
@@ -207,11 +260,18 @@ section {
 
 .double::after {
   content: "S";
+  .gen6 & {
+    content: "2x";
+  }
 }
 
 .half::after {
   content: "N";
   font-family: Arial;
+  .gen6 & {
+    content: "\00bd";
+    font-size: 1.3333em;
+  }
 }
 
 .none::after {
@@ -225,10 +285,16 @@ section {
     justify-content: flex-end;
     &::before {
       right: -3.5em;
+      .gen6 & {
+        right: -4.5em;
+      }
     }
     &::after {
       right: -3.5rem;
       transform: translate(-50%, -50%);
+      .gen6 & {
+        right: calc(-4.5rem + .22222222rem);
+      }
     }
   }
 }
@@ -238,10 +304,16 @@ section {
     justify-content: flex-start;
     &::before {
       left: -3.5em;
+      .gen6 & {
+        left: -4.5em;
+      }
     }
     &::after {
       left: -4rem;
       transform: translate(50%, -50%);
+      .gen6 & {
+        left: calc(-4.5rem - .22222222rem);
+      }
     }
   }
 }
