@@ -11,6 +11,16 @@ Pokémon Go
 [Online version](https://karlbishop.github.io/pokemon-type-chart/)  
 [Downloadable image](https://karlbishop.github.io/pokemon-type-chart/images/pogo-pokemon-type-chart.png)
 
+*Note*: in Pokémon Go damage modifiers have different values compared to Gen 6 (Soure: [eurogamer.net](https://www.eurogamer.net/articles/2018-12-21-pokemon-go-type-chart-effectiveness-weaknesses)):
+- **Not very effective** - 0.625x damage, instead of the 0.5x damage done in the main series.
+- **Super effecive** - 1.6x damage, instead of 2x damage done in the main series.
+- **Immunity** - 0.39x damage, instead of 0 damage done in the main series.
+- **Doubly effective** - 2.56x damage, instead of 4x damage done in the main series.
+
+*Old Pokémon Go charts* (before immunities were added back in):  
+[Online version](https://karlbishop.github.io/pokemon-type-chart/pogo_old)  
+[Downloadable image](https://karlbishop.github.io/pokemon-type-chart/images/oldpogo-pokemon-type-chart.png)
+
 *Other good charts*:  
 ["Easier-to-understand version..." on 9GAG](http://9gag.com/gag/aD0DVpG/an-easier-to-understand-version-of-the-type-chart-of-pokemon)  
 [Pokémon Database](http://pokemondb.net/type)  
