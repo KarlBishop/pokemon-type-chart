@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% for pokemon in page.pokemon %}
+<article>
+
+  <section class="matchup attacked-by">
+    {% for damage in pokemon.damage_from %}
+      <div class="damage {{ damage.amount }}{% if damage.types.size > 5 %} small{% endif %}">
+        {% for type in damage.types %}
+        <div class="poketype {{ type | downcase }}">{{ type }}</div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+
+  <section class="subject big">
+    <div class="poketype {{ pokemon.name | downcase }}">{{ pokemon.name }}</div>
+  </section>
+
+  <section class="matchup attacking">
+    {% for damage in pokemon.damage_to %}
+      <div class="damage {{ damage.amount }}{% if damage.types.size > 5 %} small{% endif %}">
+        {% for type in damage.types %}
+        <div class="poketype {{ type | downcase }}">{{ type }}</div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+
+</article>
+{% endfor %}
