@@ -1,6 +1,6 @@
 ---
 layout: type_chart
-permalink: /pogo
+permalink: /
 title: Pokémon Go Type Matchup Chart
 description: Shows how damage modifiers are applied when attacking and defending against Pokémon of different types in Pokémon Go
 pokemon:
