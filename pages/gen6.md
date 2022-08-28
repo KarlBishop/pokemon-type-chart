@@ -3,332 +3,333 @@ layout: type_chart
 permalink: /gen6
 title: Pokémon Gen 6 Type Matchup Chart
 description: Shows how damage modifiers are applied when attacking and defending against Pokémon of different types in Pokémon Generation 6 games
+lang: en
 pokemon:
   -
-    name: "Bug"
+    name: "bug"
     damage_from:
       -
         amount: "double"
-        types: [ "Fire", "Flying", "Rock" ]
+        types: [ "fire", "flying", "rock" ]
       -
         amount: "half"
-        types: [ "Fight", "Grass", "Ground" ]
+        types: [ "fight", "grass", "ground" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Dark", "Grass", "Psychic" ]
+        types: [ "dark", "grass", "psychic" ]
       -
         amount: "half"
-        types: [ "Fairy", "Fight", "Fire", "Flying", "Ghost", "Poison", "Steel" ]
+        types: [ "fairy", "fight", "fire", "flying", "ghost", "poison", "steel" ]
   -
-    name: "Dark"
+    name: "dark"
     damage_from:
       -
         amount: "double"
-        types: [ "Bug", "Fairy", "Fight" ]
+        types: [ "bug", "fairy", "fight" ]
       -
         amount: "half"
-        types: [ "Dark", "Ghost" ]
+        types: [ "dark", "ghost" ]
       -
         amount: "none"
-        types: [ "Psychic" ]
+        types: [ "psychic" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Ghost", "Psychic" ]
+        types: [ "ghost", "psychic" ]
       -
         amount: "half"
-        types: [ "Dark", "Fairy", "Fight" ]
+        types: [ "dark", "fairy", "fight" ]
   -
-    name: "Dragon"
+    name: "dragon"
     damage_from:
       -
         amount: "double"
-        types: [ "Dragon", "Ice", "Fairy" ]
+        types: [ "dragon", "ice", "fairy" ]
       -
         amount: "half"
-        types: [ "Elec", "Fire", "Grass", "Water" ]
+        types: [ "elec", "fire", "grass", "water" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Dragon" ]
+        types: [ "dragon" ]
       -
         amount: "half"
-        types: [ "Steel" ]
+        types: [ "steel" ]
       -
         amount: "none"
-        types: [ "Fairy" ]
+        types: [ "fairy" ]
   -
-    name: "Elec"
+    name: "elec"
     damage_from:
       -
         amount: "double"
-        types: [ "Ground" ]
+        types: [ "ground" ]
       -
         amount: "half"
-        types: [ "Elec", "Flying", "Steel" ]
+        types: [ "elec", "flying", "steel" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Flying", "Water" ]
+        types: [ "flying", "water" ]
       -
         amount: "half"
-        types: [ "Dragon", "Elec", "Grass" ]
+        types: [ "dragon", "elec", "grass" ]
       -
         amount: "none"
-        types: [ "Ground" ]
+        types: [ "ground" ]
   -
-    name: "Fairy"
+    name: "fairy"
     damage_from:
       -
         amount: "double"
-        types: [ "Poison", "Steel" ]
+        types: [ "poison", "steel" ]
       -
         amount: "half"
-        types: [ "Bug", "Dark", "Fight" ]
+        types: [ "bug", "dark", "fight" ]
       -
         amount: "none"
-        types: [ "Dragon" ]
+        types: [ "dragon" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Dark", "Dragon", "Fight" ]
+        types: [ "dark", "dragon", "fight" ]
       -
         amount: "half"
-        types: [ "Fire", "Poison", "Steel" ]
+        types: [ "fire", "poison", "steel" ]
   -
-    name: "Fight"
+    name: "fight"
     damage_from:
       -
         amount: "double"
-        types: [ "Fairy", "Flying", "Psychic" ]
+        types: [ "fairy", "flying", "psychic" ]
       -
         amount: "half"
-        types: [ "Bug", "Dark", "Rock" ]
+        types: [ "bug", "dark", "rock" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Dark", "Ice", "Normal", "Rock", "Steel" ]
+        types: [ "dark", "ice", "normal", "rock", "steel" ]
       -
         amount: "half"
-        types: [ "Bug", "Fairy", "Flying", "Poison", "Psychic" ]
+        types: [ "bug", "fairy", "flying", "poison", "psychic" ]
       -
         amount: "none"
-        types: [ "Ghost" ]
+        types: [ "ghost" ]
   -
-    name: "Fire"
+    name: "fire"
     damage_from:
       -
         amount: "double"
-        types: [ "Ground", "Rock", "Water" ]
+        types: [ "ground", "rock", "water" ]
       -
         amount: "half"
-        types: [ "Bug", "Fairy", "Fire", "Grass", "Ice", "Steel" ]
+        types: [ "bug", "fairy", "fire", "grass", "ice", "steel" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Bug", "Grass", "Ice", "Steel" ]
+        types: [ "bug", "grass", "ice", "steel" ]
       -
         amount: "half"
-        types: [ "Dragon", "Fire", "Rock", "Water" ]
+        types: [ "dragon", "fire", "rock", "water" ]
   -
-    name: "Flying"
+    name: "flying"
     damage_from:
       -
         amount: "double"
-        types: [ "Elec", "Ice", "Rock" ]
+        types: [ "elec", "ice", "rock" ]
       -
         amount: "half"
-        types: [ "Bug", "Fight", "Grass" ]
+        types: [ "bug", "fight", "grass" ]
       -
         amount: "none"
-        types: [ "Ground" ]
+        types: [ "ground" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Bug", "Fight", "Grass" ]
+        types: [ "bug", "fight", "grass" ]
       -
         amount: "half"
-        types: [ "Elec", "Rock", "Steel" ]
+        types: [ "elec", "rock", "steel" ]
   -
-    name: "Ghost"
+    name: "ghost"
     damage_from:
       -
         amount: "double"
-        types: [ "Ghost", "Dark" ]
+        types: [ "ghost", "dark" ]
       -
         amount: "half"
-        types: [ "Bug", "Poison" ]
+        types: [ "bug", "poison" ]
       -
         amount: "none"
-        types: [ "Normal", "Fight" ]
+        types: [ "normal", "fight" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Ghost", "Psychic" ]
+        types: [ "ghost", "psychic" ]
       -
         amount: "half"
-        types: [ "Dark" ]
+        types: [ "dark" ]
       -
         amount: "none"
-        types: [ "Normal" ]
+        types: [ "normal" ]
   -
-    name: "Grass"
+    name: "grass"
     damage_from:
       -
         amount: "double"
-        types: [ "Bug", "Fire", "Flying", "Ice", "Poison" ]
+        types: [ "bug", "fire", "flying", "ice", "poison" ]
       -
         amount: "half"
-        types: [ "Elec", "Grass", "Ground", "Water" ]
+        types: [ "elec", "grass", "ground", "water" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Ground", "Rock", "Water" ]
+        types: [ "ground", "rock", "water" ]
       -
         amount: "half"
-        types: [ "Bug", "Dragon", "Fire", "Flying", "Grass", "Poison", "Steel" ]
+        types: [ "bug", "dragon", "fire", "flying", "grass", "poison", "steel" ]
   -
-    name: "Ground"
+    name: "ground"
     damage_from:
       -
         amount: "double"
-        types: [ "Grass", "Ice", "Water" ]
+        types: [ "grass", "ice", "water" ]
       -
         amount: "half"
-        types: [ "Poison", "Rock" ]
+        types: [ "poison", "rock" ]
       -
         amount: "none"
-        types: [ "Elec" ]
+        types: [ "elec" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Elec", "Fire", "Poison", "Rock", "Steel" ]
+        types: [ "elec", "fire", "poison", "rock", "steel" ]
       -
         amount: "half"
-        types: [ "Bug", "Grass" ]
+        types: [ "bug", "grass" ]
       -
         amount: "none"
-        types: [ "Flying" ]
+        types: [ "flying" ]
   -
-    name: "Ice"
+    name: "ice"
     damage_from:
       -
         amount: "double"
-        types: [ "Fight", "Fire", "Rock", "Steel" ]
+        types: [ "fight", "fire", "rock", "steel" ]
       -
         amount: "half"
-        types: [ "Ice" ]
+        types: [ "ice" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Dragon", "Flying", "Grass", "Ground" ]
+        types: [ "dragon", "flying", "grass", "ground" ]
       -
         amount: "half"
-        types: [ "Fire", "Ice", "Steel", "Water" ]
+        types: [ "fire", "ice", "steel", "water" ]
   -
-    name: "Normal"
+    name: "normal"
     damage_from:
       -
         amount: "double"
-        types: [ "Fight" ]
+        types: [ "fight" ]
       -
         amount: "none"
-        types: [ "Ghost" ]
+        types: [ "ghost" ]
     damage_to:
       -
         amount: "half"
-        types: [ "Rock", "Steel" ]
+        types: [ "rock", "steel" ]
       -
         amount: "none"
-        types: [ "Ghost" ]
+        types: [ "ghost" ]
   -
-    name: "Poison"
+    name: "poison"
     damage_from:
       -
         amount: "double"
-        types: [ "Ground", "Psychic" ]
+        types: [ "ground", "psychic" ]
       -
         amount: "half"
-        types: [ "Bug", "Fairy", "Fight", "Grass", "Poison" ]
+        types: [ "bug", "fairy", "fight", "grass", "poison" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Grass", "Fairy" ]
+        types: [ "grass", "fairy" ]
       -
         amount: "half"
-        types: [ "Ghost", "Ground", "Poison", "Rock" ]
+        types: [ "ghost", "ground", "poison", "rock" ]
       -
         amount: "none"
-        types: [ "Steel" ]
+        types: [ "steel" ]
   -
-    name: "Psychic"
+    name: "psychic"
     damage_from:
       -
         amount: "double"
-        types: [ "Bug", "Dark", "Ghost" ]
+        types: [ "bug", "dark", "ghost" ]
       -
         amount: "half"
-        types: [ "Fight", "Psychic" ]
+        types: [ "fight", "psychic" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Fight", "Poison" ]
+        types: [ "fight", "poison" ]
       -
         amount: "half"
-        types: [ "Psychic", "Steel" ]
+        types: [ "psychic", "steel" ]
       -
         amount: "none"
-        types: [ "Dark" ]
+        types: [ "dark" ]
   -
-    name: "Rock"
+    name: "rock"
     damage_from:
       -
         amount: "double"
-        types: [ "Fight", "Grass", "Ground", "Steel", "Water" ]
+        types: [ "fight", "grass", "ground", "steel", "water" ]
       -
         amount: "half"
-        types: [ "Fire", "Flying", "Normal", "Poison" ]
+        types: [ "fire", "flying", "normal", "poison" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Bug", "Fire", "Flying", "Ice" ]
+        types: [ "bug", "fire", "flying", "ice" ]
       -
         amount: "half"
-        types: [ "Fight", "Ground", "Steel" ]
+        types: [ "fight", "ground", "steel" ]
   -
-    name: "Steel"
+    name: "steel"
     damage_from:
       -
         amount: "double"
-        types: [ "Fight", "Fire", "Ground" ]
+        types: [ "fight", "fire", "ground" ]
       -
         amount: "half"
-        types: [ "Bug", "Dragon", "Fairy", "Flying", "Grass", "Ice", "Normal", "Psychic", "Rock", "Steel" ]
+        types: [ "bug", "dragon", "fairy", "flying", "grass", "ice", "normal", "psychic", "rock", "steel" ]
       -
         amount: "none"
-        types: [ "Poison" ]
+        types: [ "poison" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Fairy", "Ice", "Rock" ]
+        types: [ "fairy", "ice", "rock" ]
       -
         amount: "half"
-        types: [ "Elec", "Fire", "Steel", "Water" ]
+        types: [ "elec", "fire", "steel", "water" ]
   -
-    name: "Water"
+    name: "water"
     damage_from:
       -
         amount: "double"
-        types: [ "Elec", "Grass" ]
+        types: [ "elec", "grass" ]
       -
         amount: "half"
-        types: [ "Fire", "Ice", "Steel", "Water" ]
+        types: [ "fire", "ice", "steel", "water" ]
     damage_to:
       -
         amount: "double"
-        types: [ "Fire", "Ground", "Rock" ]
+        types: [ "fire", "ground", "rock" ]
       -
         amount: "half"
-        types: [ "Dragon", "Grass", "Water" ]
+        types: [ "dragon", "grass", "water" ]
 ---
