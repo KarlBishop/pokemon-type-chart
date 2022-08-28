@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html lang="en" class="{{ page.permalink | remove: '/' }}">
+<html lang="{{ page.lang | default: 'en' }}" class="{{ page.permalink | split: '/' | last }}">
 
   {% include head.html %}
 
