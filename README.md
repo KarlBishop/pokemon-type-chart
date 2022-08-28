@@ -28,3 +28,5 @@ Pokémon Go
 [Sheri-B's on Reddit](http://i.imgur.com/YpJWUB4.png) ([original post here](https://www.reddit.com/r/pokemon/comments/1oq3rg/was_getting_frustrated_finding_an_easytoread_type/))  
 
 Uses pixelmix font by Andrew Tyler ([license](https://creativecommons.org/licenses/by-sa/3.0/us/))
+
+Other languages: [Français](https://github.com/KarlBishop/pokemon-type-chart/blob/gh-pages/README.fr.md)
