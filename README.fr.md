@@ -4,12 +4,12 @@ Tableaux de correspondance de type, montrant comment les modificateurs de dégâ
 Génération 6+
 ---
 [Version en ligne](https://karlbishop.github.io/pokemon-type-chart/fr/gen6)  
-[Image téléchargeable](https://karlbishop.github.io/pokemon-type-chart/images/gen6-pokemon-type-chart.png)
+[Image téléchargeable](https://karlbishop.github.io/pokemon-type-chart/images/gen6-pokemon-type-chart.fr.png)
 
 Pokémon Go
 ---
 [Version en ligne](https://karlbishop.github.io/pokemon-type-chart/fr)  
-[Image téléchargeable](https://karlbishop.github.io/pokemon-type-chart/images/pogo-pokemon-type-chart.png)
+[Image téléchargeable](https://karlbishop.github.io/pokemon-type-chart/images/pogo-pokemon-type-chart.fr.png)
 
 *Remarque* : dans Pokémon Go, les modificateurs de dégâts ont des valeurs différentes par rapport à Gen 6 (Source : [eurogamer.net](https://www.eurogamer.net/articles/2018-12-21-pokemon-go-type-chart-effectiveness-weaknesses)) :  
 - **Pas très efficace** - 0,625x dégâts, au lieu des 0,5x dégâts infligés dans la série principale.
