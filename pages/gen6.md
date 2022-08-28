@@ -1,8 +1,8 @@
 ---
 layout: type_chart
 permalink: /gen6
-title: Pokémon Gen 6 Type Matchup Chart
-description: Shows how damage modifiers are applied when attacking and defending against Pokémon of different types in Pokémon Generation 6 games
+title: Pokémon Gen 6+ Type Matchup Chart
+description: Shows how damage modifiers are applied when attacking and defending against Pokémon of different types in Pokémon Generation 6+ games
 lang: en
 pokemon:
   -
