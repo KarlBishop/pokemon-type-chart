@@ -17,6 +17,8 @@ en:
   rock: "Rock"
   steel: "Steel"
   water: "Water"
+  readme: "Readme"
+  readmeLink: https://github.com/KarlBishop/pokemon-type-chart/blob/gh-pages/README.md
 fr:
   bug: "Insecte"
   dark: "Ténèbre"
@@ -36,3 +38,5 @@ fr:
   rock: "Roche"
   steel: "Acier"
   water: "Eau"
+  readme: "Lisez-moi"
+  readmeLink: https://github.com/KarlBishop/pokemon-type-chart/blob/gh-pages/README.fr.md
